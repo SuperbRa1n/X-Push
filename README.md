@@ -1,124 +1,105 @@
-# wxcloudrun-flask
-[![GitHub license](https://img.shields.io/github/license/WeixinCloud/wxcloudrun-express)](https://github.com/WeixinCloud/wxcloudrun-express)
-![GitHub package.json dependency version (prod)](https://img.shields.io/badge/python-3.7.3-green)
+# NotionNext
 
-微信云托管 python Flask 框架模版，实现简单的计数器读写接口，使用云托管 MySQL 读写、记录计数值。
+<p>
+  <a aria-label="GitHub commit activity" href="https://github.com/tangly1024/NotionNext/commits/main" title="GitHub commit activity">
+    <img src="https://img.shields.io/github/commit-activity/m/tangly1024/NotionNext?style=for-the-badge"/>
+  </a>
+  <a aria-label="GitHub contributors" href="https://github.com/tangly1024/NotionNext/graphs/contributors" title="GitHub contributors">
+    <img src="https://img.shields.io/github/contributors/tangly1024/NotionNext?color=orange&style=for-the-badge"/>
+  </a>
+  <a aria-label="Build status" href="#" title="Build status">
+    <img src="https://img.shields.io/github/deployments/tangly1024/NotionNext/Production?logo=Vercel&style=for-the-badge"/>
+  </a>
+  <a aria-label="Powered by Vercel" href="https://vercel.com?utm_source=Craigary&utm_campaign=oss" title="Powered by Vercel">
+    <img src="https://www.datocms-assets.com/31049/1618983297-powered-by-vercel.svg" height="28"/>
+  </a>
+</p>
 
-![](https://qcloudimg.tencent-cloud.cn/raw/be22992d297d1b9a1a5365e606276781.png)
-
-
-## 快速开始
-前往 [微信云托管快速开始页面](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/basic/guide.html)，选择相应语言的模板，根据引导完成部署。
-
-## 本地调试
-下载代码在本地调试，请参考[微信云托管本地调试指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/)
-
-## 实时开发
-代码变动时，不需要重新构建和启动容器，即可查看变动后的效果。请参考[微信云托管实时开发指南](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/guide/debug/dev.html)
-
-## Dockerfile最佳实践
-请参考[如何提高项目构建效率](https://developers.weixin.qq.com/miniprogram/dev/wxcloudrun/src/scene/build/speed.html)
-
-## 目录结构说明
-
-~~~
-.
-├── Dockerfile dockerfile       dockerfile
-├── README.md README.md         README.md文件
-├── container.config.json       模板部署「服务设置」初始化配置（二开请忽略）
-├── requirements.txt            依赖包文件
-├── config.py                   项目的总配置文件  里面包含数据库 web应用 日志等各种配置
-├── run.py                      flask项目管理文件 与项目进行交互的命令行工具集的入口
-└── wxcloudrun                  app目录
-    ├── __init__.py             python项目必带  模块化思想
-    ├── dao.py                  数据库访问模块
-    ├── model.py                数据库对应的模型
-    ├── response.py             响应结构构造
-    ├── templates               模版目录,包含主页index.html文件
-    └── views.py                执行响应的代码所在模块  代码逻辑处理主要地点  项目大部分代码在此编写
-~~~
+一个使用 NextJS + Notion API 实现的，部署在 Vercel 上的静态博客系统。为Notion和所有创作者设计。
 
 
+## 预览效果
 
-## 服务 API 文档
+在线演示：[https://preview.tangly1024.com/](https://preview.tangly1024.com/) ，项目支持多主题切换，没找到喜欢的主题？[贡献](/CONTRIBUTING.md)一个吧~
 
-### `GET /api/count`
+| Next | Medium | Hexo | Fukasawa |
+|--|--|--|--|
+| <img src='./docs/theme-next.png' width='300'/> [预览NEXT](https://preview.tangly1024.com/?theme=next)  | <img src='./docs/theme-medium.png' width='300'/> [预览MEDIUM](https://preview.tangly1024.com/?theme=medium) | <img src='./docs/theme-hexo.png' width='300'/> [预览HEXO](https://preview.tangly1024.com/?theme=hexo) | <img src='./docs/theme-fukasawa.png' width='300'/> [预览FUKASAWA](https://preview.tangly1024.com/?theme=fukasawa) |
 
-获取当前计数
+## 我要如何开始？
 
-#### 请求参数
-
-无
-
-#### 响应结果
-
-- `code`：错误码
-- `data`：当前计数值
-
-##### 响应结果示例
-
-```json
-{
-  "code": 0,
-  "data": 42
-}
-```
-
-#### 调用示例
-
-```
-curl https://<云托管服务域名>/api/count
-```
+只需几分钟即可搭建您的个人站点，欢迎移步[我的博客](https://tangly1024.com/article/notion-next) 查看教程 
 
 
+## 致谢
+感谢Craig Hart发起的Nobelium项目
+<table><tr align="left">
+  <td align="center"><a href="https://github.com/craigary" title="Craig Hart"><img src="https://avatars.githubusercontent.com/u/10571717" width="64px;"alt="Craig Hart"/></a><br/><a href="https://github.com/craigary" title="Craig Hart">Craig Hart</a></td>
+</tr></table>
 
-### `POST /api/count`
+## 贡献者
 
-更新计数，自增或者清零
+<table>
+  <tr align="left">
+  <td align="center"><a href="https://github.com/tangly1024"><img src="https://avatars.githubusercontent.com/u/15920488" width="64px;"alt="tangly1024"/><br/><sub><b>tangly1024</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=tangly1024" title="Owner" >🎫 🔧 🎨 🐛</a></td> 
+    
+  <td align="center"><a href="https://github.com/uWayLu"><img src="https://avatars.githubusercontent.com/u/21689326" width="64px;" alt="uWayLu"/><br/><sub><b>uWayLu</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=uWayLu" title="uWayLu" >🔧 🐛</a></td>
+    
+  <td align="center"><a href="https://github.com/txs"><img src="https://avatars.githubusercontent.com/u/554329" width="64px;" alt="txs"/><br/><sub><b>txs</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=txs" title="txs" >🔧 🐛</a></td>  
 
-#### 请求参数
+  <td align="center"><a href="https://github.com/yuzhanglong"><img src="https://avatars.githubusercontent.com/u/56540811" width="64px;" alt="yuzhanglong"/><br/><sub><b>yuzhanglong</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=yuzhanglong" title="yuzhanglong" >🔧 🐛</a></td> 
+    
+  <td align="center"><a href="https://github.com/Hscpro"><img src="https://avatars.githubusercontent.com/u/13926044" width="64px;" alt="Hscpro"/><br/><sub><b>Hscpro</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=Hscpro" title="Hscpro" >🔧 🐛</a></td> 
+    
+  <td align="center"><a href="https://github.com/JensonMiao"><img src="https://avatars.githubusercontent.com/u/46488783" width="64px;" alt="JensonMiao"/><br/><sub><b>JensonMiao</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=JensonMiao" title="JensonMiao" >🔧 🐛</a></td> 
+  
+  <td align="center"><a href="https://github.com/haixin1225"><img src="https://avatars.githubusercontent.com/u/28828438" width="64px;"  alt="haixin1225"/><br/><sub><b>haixin1225</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=haixin1225" title="haixin1225" >🔧 🐛</a></td>
 
-- `action`：`string` 类型，枚举值
-  - 等于 `"inc"` 时，表示计数加一
-  - 等于 `"clear"` 时，表示计数重置（清零）
+  <td align="center"><a href="https://github.com/mouyase"><img src="https://avatars.githubusercontent.com/u/7844572" width="64px;"  alt="mouyase"/><br/><sub><b>mouyase</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=mouyase" title="mouyase" >🔧 🐛</a></td>
+  
+  <td align="center"><a href="https://github.com/qfdk"><img src="https://avatars.githubusercontent.com/u/2404478" width="64px;"  alt="qfdk"/><br/><sub><b>qfdk</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=qfdk" title="qfdk" >🔧 🐛</a></td>
+  
+  <td align="center"><a href="https://github.com/ifyz"><img src="https://avatars.githubusercontent.com/u/118271360" width="64px;"  alt="ifyz"/><br/><sub><b>ifyz</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=ifyz" title="ifyz" >🔧 🐛</a></td>
 
-##### 请求参数示例
+  <td align="center"><a href="https://github.com/SwwweetOrange"><img src="https://avatars.githubusercontent.com/u/71168966" width="64px;"  alt="SwwweetOrange"/><br/><sub><b>SwwweetOrange</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=SwwweetOrange" title="SwwweetOrange" >🔧 🐛</a></td>
 
-```
-{
-  "action": "inc"
-}
-```
+  <td align="center"><a href="https://github.com/Ylarod"><img src="https://avatars.githubusercontent.com/u/30978685" width="64px;"  alt="Ylarod"/><br/><sub><b>Ylarod</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=Ylarod" title="Ylarod" >🔧 🐛</a></td>
 
-#### 响应结果
+  <td align="center"><a href="https://github.com/lifeafter619"><img src="https://avatars.githubusercontent.com/u/65111206" width="64px;"  alt="Etherrreal."/><br/><sub><b>Etherrreal.</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=lifeafter619" title="Etherrreal." >🔧 🐛</a></td>
+  
+  <td align="center"><a href="https://github.com/ykxkykx"><img src="https://avatars.githubusercontent.com/u/17985993" width="64px;"  alt="Joshua Astray"/><br/><sub><b>Joshua Astray</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=ykxkykx" title="ykxkykx" >🔧 🐛</a></td>
 
-- `code`：错误码
-- `data`：当前计数值
+  <td align="center"><a href="https://github.com/Vixcity"><img src="https://avatars.githubusercontent.com/u/57704177" width="64px;"  alt="Vixcity"/><br/><sub><b>Vixcity</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=Vixcity" title="Vixcity" >🔧 🐛</a></td>
 
-##### 响应结果示例
+  <td align="center"><a href="https://github.com/ipatpat"><img src="https://avatars.githubusercontent.com/u/39089551" width="64px;"  alt="ipatpat"/><br/><sub><b>ipatpat</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=ipatpat" title="ipatpat" >🔧 🐛</a></td>
 
-```json
-{
-  "code": 0,
-  "data": 42
-}
-```
+  <td align="center"><a href="https://github.com/xloong"><img src="https://avatars.githubusercontent.com/u/8479955" width="64px;"  alt="xloong"/><br/><sub><b>xloong</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=xloong" title="xloong" >🔧 🐛</a></td>
 
-#### 调用示例
+  <td align="center"><a href="https://github.com/expoli"><img src="https://avatars.githubusercontent.com/u/31023767" width="64px;"  alt="expoli"/><br/><sub><b>expoli</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=expoli" title="expoli" >🔧 🐛</a></td>
 
-```
-curl -X POST -H 'content-type: application/json' -d '{"action": "inc"}' https://<云托管服务域名>/api/count
-```
+  <td align="center"><a href="https://github.com/SuperHuangXu"><img src="https://avatars.githubusercontent.com/u/14816052" width="64px;"  alt="SuperHuangXu"/><br/><sub><b>bUBBLE</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=SuperHuangXu" title="SuperHuangXu" >🔧 🐛</a></td>
 
-## 使用注意
-如果不是通过微信云托管控制台部署模板代码，而是自行复制/下载模板代码后，手动新建一个服务并部署，需要在「服务设置」中补全以下环境变量，才可正常使用，否则会引发无法连接数据库，进而导致部署失败。
-- MYSQL_ADDRESS
-- MYSQL_PASSWORD
-- MYSQL_USERNAME
-以上三个变量的值请按实际情况填写。如果使用云托管内MySQL，可以在控制台MySQL页面获取相关信息。
+  <td align="center"><a href="https://github.com/Pylogmon"><img src="https://avatars.githubusercontent.com/u/59004461" width="64px;"  alt="Pylogmon"/><br/><sub><b>派了个萌 </b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=Pylogmon" title="Pylogmon" >🔧 🐛</a></td>
+  
+  <td align="center"><a href="https://github.com/SkysCrystal"><img src="https://avatars.githubusercontent.com/u/49473463" width="64px;"  alt="SkysCrystal"/><br/><sub><b>Simon Shi</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=SkysCrystal" title="SkysCrystal" >🔧 🐛</a></td>
+  
+  <td align="center"><a href="https://github.com/siygle"><img src="https://avatars.githubusercontent.com/u/173408" width="64px;"  alt="S.Y. Lee"/><br/><sub><b>S.Y. Lee</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=siygle" title="siygle" >🔧 🐛</a></td>
 
+  <td align="center"><a href="https://github.com/fighting-bug"><img src="https://avatars.githubusercontent.com/u/56441589" width="64px;"  alt="fighting-buf"/><br/><sub><b>fighting-buf</b></sub></a><br/><a href="https://github.com/tangly1024/NotionNext/commits?author=fighting-bug" title="fighting-buf" >🔧 🐛</a></td>
+
+
+</tr>
+</table>
+
+## 引用技术
+
+- **框架**: [Next.js](https://nextjs.org)
+- **样式**: [Tailwind CSS](https://www.tailwindcss.cn/) 和 `@tailwindcss/jit` compiler
+- **渲染**: [React-notion-x](https://github.com/NotionX/react-notion-x)
+- **评论**: [Giscus](https://giscus.app/zh-CN), [Gitalk](https://gitalk.github.io), [Cusdis](https://cusdis.com), [Utterances](https://utteranc.es)
+- **图标**: [Fontawesome](https://fontawesome.com/v6/icons/)
 
 
 ## License
 
-[MIT](./LICENSE)
+The MIT License.
